@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Malify Calculator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="head">
+      <div class="title">Malify Calculator</div>
+      <img src="khudam.png">
+      </div>
+      <div class="container" id="topContainer">
+        <div class="title">Amount</div>
+        <div class="inputContainer">
+          <span>$</span>
+          <input
+            onkeyup="calculateAmount()"
+            type="text"
+            id="AmountTotalInput"
+            placeholder="Enter Amount"
+          />
+        </div>
+      </div>
+      <div class="container" id="bottom">
+        <div class="splitContainer">
+          <div class="title">No of Sections</div>
+          <div class="controls">
+            <span class="buttonContainer">
+              <button class="splitButton" onclick="increaseSection()">
+                <span class="buttonText">+</span>
+              </button>
+            </span>
+            <span class="splitAmount" id="numberOfSection">1</span>
+            <span class="buttonContainer">
+              <button class="splitButton" onclick="decreaseSection()">
+                <span class="buttonText">-</span>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class="totalContainer">
+          <div class="title">Amount per Section</div>
+          <div class="total" id="perSectionTotal">$0.00</div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
